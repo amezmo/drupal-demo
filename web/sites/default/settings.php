@@ -783,6 +783,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 
 (\Dotenv\Dotenv::createMutable($app_root . '/../'))->load();
 
+$settings['file_public_path'] = 'sites/default/files';
 $databases['default']['default'] = array (
   'database' => $_ENV['MYSQL_DATABASE'],
   'username' => $_ENV['MYSQL_USER'],
