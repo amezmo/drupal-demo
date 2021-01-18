@@ -9,7 +9,7 @@ if (isset($_ENV['APP_HOSTNAME'])) {
   $databases['default']['default'] = [
     'database' => $_ENV['DB_DATABASE'],
     'driver' => 'mysql',
-    'host' =>  $_ENV['DB_DATABASE'],
+    'host' =>  $_ENV['DB_HOST'],
     'password' => $_ENV['DB_PASSWORD'],
     'port' => $_ENV['DB_PORT'],
     'prefix' => '',
