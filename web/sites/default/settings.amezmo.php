@@ -1,20 +1,19 @@
 <?php
 /**
  * @file
- * Platform.sh settings.
+ * Amezmo settings.
  */
 
 // Configure the database.
 if (isset($_ENV['APP_HOSTNAME'])) {
-  // TODO: FIND A WAY TO GET DB_HOST AND DB_USER
   $databases['default']['default'] = [
     'database' => $_ENV['DB_DATABASE'],
     'driver' => 'mysql',
-    'host' => 'HOST',
+    'host' =>  $_ENV['DB_DATABASE'],
     'password' => $_ENV['DB_PASSWORD'],
     'port' => $_ENV['DB_PORT'],
     'prefix' => '',
-    'username' => 'USER'
+    'username' => $_ENV['DB_USER']
   ];
 
   // Configure private and temporary file paths.
@@ -30,7 +29,7 @@ if (isset($_ENV['APP_HOSTNAME'])) {
   // Set the project-specific entropy value, used for generating one-time
   // keys and such.
   // TODO: FIND A WAY TO REPLACE THIS WITH APP_KEY
-  $settings['hash_salt'] = '';
+  $settings['hash_salt'] = $_ENV['APP_KEY'];
 }
 
 // Set redis configuration.
