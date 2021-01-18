@@ -773,28 +773,14 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
 
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
 
-$settings['image_allow_insecure_derivatives'] = TRUE;
-$settings['file_chmod_directory'] = 2775;$
-$settings['file_chmod_file'] = 0664;
-
-(\Dotenv\Dotenv::createMutable($app_root . '/../'))->load();
-
-
-$databases['default']['default'] = array (
-  'database' => $_ENV['MYSQL_DATABASE'],
-  'username' => $_ENV['MYSQL_USER'],
-  'password' => $_ENV['MYSQL_PASSWORD'],
-  'prefix' => '',
-  'host' => $_ENV['MYSQL_HOSTNAME'],
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
+// Amezmo settings.
+if (file_exists($app_root . '/' . $site_path . '/settings.amezmo.php')) {
+  include $app_root . '/' . $site_path . '/settings.amezmo.php';
+}
 
 $settings['config_sync_directory'] = 'sites/default/files/config_HdeqQy5ZurGRrqdjembfRal0MuPmCf7Vqzl4ZT9jszESoelaKvjNoR0-RMKUP1vF-dMztkY11w/sync';
