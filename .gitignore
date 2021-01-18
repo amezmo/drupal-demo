@@ -1,6 +1,8 @@
 /vendor
-**/node_modules
 .env
 .DS_Store
 .idea
-web/sites/default/files*
+/web/sites/*/files**
+node_modules
+private
+/web/sites/*/settings.local.php
