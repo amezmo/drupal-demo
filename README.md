@@ -4,7 +4,7 @@ An example Drupal 8 application to deploy on [Amezmo](https://www.amezmo.com/reg
 # Drupal demo application
 
 ## Overview
-This repository contains a starter template for deploying and hosting Drupal applications on [Amezmo](https://www.amezmo.com/register). ). It loads database variables from .env which is automatically created on Amezmo.
+This repository contains a starter template for deploying and hosting Drupal applications on [Amezmo](https://www.amezmo.com/register). It loads database variables from .env which is automatically created on Amezmo.
 
 ## Features
 - Persistent storage
